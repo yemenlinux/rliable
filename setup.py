@@ -27,7 +27,7 @@ here = pathlib.Path(__file__).parent.resolve()
 long_description = (here / 'README.md').read_text(encoding='utf-8')
 
 install_requires = [
-    'arch >= 7.2.0',
+    'arch > 7.2.0',
     'scipy >= 1.7.0',
     'absl-py >= 0.9.0',
     'numpy >= 1.16.4',
@@ -57,10 +57,10 @@ setup(
         'License :: OSI Approved :: Apache Software License',
 
         'Programming Language :: Python :: 3',
-        'Programming Language :: Python :: 3.5',
-        'Programming Language :: Python :: 3.6',
-        'Programming Language :: Python :: 3.7',
-        'Programming Language :: Python :: 3.8',
+        'Programming Language :: Python :: 3.9',
+        'Programming Language :: Python :: 3.10',
+        'Programming Language :: Python :: 3.11',
+        'Programming Language :: Python :: 3.12',
         'Programming Language :: Python :: 3 :: Only',
 
         'Topic :: Scientific/Engineering',
