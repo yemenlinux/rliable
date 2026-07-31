@@ -93,7 +93,7 @@ class StratifiedBootstrap(arch_bs.IIDBootstrap):
       **kwargs: Keyword arguments, passed directly to `IIDBootstrap`.
     """
 
-    super().__init__(*args, random_state=random_state, **kwargs)
+    super().__init__(*args, seed=random_state, **kwargs)
     self._args_shape = args[0].shape
     self._num_tasks = self._args_shape[1]
     self._parameters = [self._num_tasks, task_bootstrap]
@@ -157,7 +157,7 @@ class StratifiedIndependentBootstrap(arch_bs.IndependentSamplesBootstrap):
       **kwargs: Keyword arguments, passed directly to `IIDBootstrap`.
     """
 
-    super().__init__(*args, random_state=random_state, **kwargs)
+    super().__init__(*args, seed=random_state, **kwargs)
     self._args_shapes = [arg.shape for arg in args]
     self._kwargs_shapes = {key: val.shape for key, val in self._kwargs.items()}
     self._args_strata_indices = [
